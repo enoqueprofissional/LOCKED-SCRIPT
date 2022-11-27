@@ -1,52 +1,55 @@
 #!/bin/bash
+#====================================================
+#	@Kenneth_code
+#====================================================
 cor1='\033[41;1;37m'
 cor2='\033[44;1;37m'
 scor='\033[0m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 SCOLOR='\033[0m'
-msg01='\033[1;37m\033[1;33mUsuário Nulo\033[1;31m'
-msg02='\033[1;37m\033[1;33mNome muito curto (MIN: 2 CHARACTERS)\033[1;31m'
-msg03='\033[1;37m\033[1;33mNome muito grande (MAX: 5 CARACTERES)\033[1;31m'
-msg04='\033[1;37m\033[1;33mSenha Nula\033[1;31m'
-msg05='\033[1;37m\033[1;33mSenha muito curta\033[1;31m'
-msg06='\033[1;37m\033[1;33mSenha muito grande\033[1;31m'
-msg07='\033[1;37m\033[1;33mDuração Nula\033[1;31m'
-msg08='\033[1;37m\033[1;33mDuração invalida, utilize números\033[1;31m'
-msg09='\033[1;37m\033[1;33mDuração máxima de um ano\033[1;31m'
+msg01='\033[1;37m\033[1;33mUsuario Nulo\033[1;31m'
+msg02='\033[1;37m\033[1;33mNombre demasiado corto (MIN: 2 CHARACTERS)\033[1;31m'
+msg03='\033[1;37m\033[1;33mNombre demasiado grande (MAX: 5 CARACTERES)\033[1;31m'
+msg04='\033[1;37m\033[1;33mContraseña Nulo\033[1;31m'
+msg05='\033[1;37m\033[1;33mContraseña demasiado corto\033[1;31m'
+msg06='\033[1;37m\033[1;33mContraseña demasiado grande\033[1;31m'
+msg07='\033[1;37m\033[1;33mDuracion Nulo\033[1;31m'
+msg08='\033[1;37m\033[1;33mDuracion no valido, utilize números\033[1;31m'
+msg09='\033[1;37m\033[1;33mDuracion máxima de un año\033[1;31m'
 msg11='\033[1;37m\033[1;33mLimite Nulo\033[1;31m'
-msg12='\033[1;37m\033[1;33mLimite invalido, utilize números\033[1;31m'
+msg12='\033[1;37m\033[1;33mLimite no valido, utilize números\033[1;31m'
 msg13='\033[1;37m\033[1;33mLimite máximo de 999\033[1;31m'
-msg14='\033[1;37m\033[1;33mUsuario já Existe\033[1;31m'
+msg14='\033[1;37m\033[1;33mUsuario ya Existe\033[1;31m'
 msg15='\033[1;37m\033[1;33m(Apenas números) GB = Min: 1gb Max: 1000gb\033[1;31m'
 msg16='\033[1;37m\033[1;33m(Apenas números)\033[1;31m'
-msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\033[1;31m'
+msg17='\033[1;37m\033[1;33m(Sin imformacion - Para Cancelar Digite CRTL + C)\033[1;31m'
+[[ $(awk -F" " '{print $2}' /usr/lib/licence) == "@KIRITO_SSH" ]] && {
     err_fun () {
         case $1 in
         1)msg -verm "$(fun_trans "Usuário Nulo")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        2)msg -verm "$(fun_trans "Nome muito curto (MIN: 2 CHARACTERS)")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        3)msg -verm "$(fun_trans "Nome muito grande (MAX: 5 CARACTERES)")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        4)msg -verm "$(fun_trans "Senha Nula")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        5)msg -verm "$(fun_trans "Senha muito curta")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        6)msg -verm "$(fun_trans "Senha muito grande")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        7)msg -verm "$(fun_trans "Duração Nula")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        8)msg -verm "$(fun_trans "Duração invalida, utilize números")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        9)msg -verm "$(fun_trans "Duração máxima de um ano")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        2)msg -verm "$(fun_trans "Nombre demasiado corto (MIN: 2 CHARACTERS)")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        3)msg -verm "$(fun_trans "Nombre demasiado grande (MAX: 5 CARACTERES)")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        4)msg -verm "$(fun_trans "Contraseña Nulo")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        5)msg -verm "$(fun_trans "Contraseña demasiado corta")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        6)msg -verm "$(fun_trans "Contraseña demasiado grande")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        7)msg -verm "$(fun_trans "Duracion Nulo")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        8)msg -verm "$(fun_trans "Duracion no valido, utilize números")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        9)msg -verm "$(fun_trans "Duracion máxima de un año")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
         11)msg -verm "$(fun_trans "Limite Nulo")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        12)msg -verm "$(fun_trans "Limite invalido, utilize números")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        12)msg -verm "$(fun_trans "Limite no valido, utilize números")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
         13)msg -verm "$(fun_trans "Limite máximo de 999")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-        14)msg -verm "$(fun_trans "Usuario já Existe")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+        14)msg -verm "$(fun_trans "Usuario ya Existe")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
 	    15)msg -verm "$(fun_trans "(Apenas números) GB = Min: 1gb Max: 1000gb")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
 	    16)msg -verm "$(fun_trans "(Apenas números)")"; sleep 2s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
-	    17)msg -verm "$(fun_trans "(Sem imformação - Para Cancelar Digite CRTL + C)")"; sleep 4s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
+	    17)msg -verm "$(fun_trans "(Sin imformacion - Para Cancelar Digite CRTL + C)")"; sleep 4s; tput cuu1; tput dl1; tput cuu1; tput dl1;;
         esac
     }
 
     intallv2ray () {
-	mkdir /etc/SSHPlus/v2ray
     apt install python3-pip -y 
-    source <(curl -sL https://raw.githubusercontent.com/MEGALODON-SSH/SSHPLUS/main/Modulos/v2ray)
-    echo -e "\033[1;37m\033[1;33mIntalado com Exito!\033[1;31m"
+    source <(curl -sL https://raw.githubusercontent.com/08kenneth/SSHPLUS/main/Modulos/v2ray)
+    echo -e "\033[1;37m\033[1;33mInstalado con Exito!\033[1;31m"
     USRdatabase="/etc/SSHPlus/RegV2ray"
     [[ ! -e ${USRdatabase} ]] && touch ${USRdatabase}
     sort ${USRdatabase} | uniq > ${USRdatabase}tmp
@@ -67,14 +70,14 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     }
     tls () {
     clear
-    echo -e "\E[44;1;37m            Ativar ou Desativar TLS             \E[0m"
+    echo -e "\E[44;1;37m            Activar o Desativar TLS             \E[0m"
     v2ray tls
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
     }
     portv () {
-    echo -e "\E[44;1;37m            ALTERAR PORTA V2RAY             \E[0m"
+    echo -e "\E[44;1;37m            ALTERAR PUERTO V2RAY             \E[0m"
     v2ray port
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
@@ -88,16 +91,15 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     fun_v2raymanager
     }
     unistallv2 () {
-    source <(curl -sL https://raw.githubusercontent.com/MEGALODON-SSH/SSHPLUS/main/Modulos/v2ray) --remove > /dev/null 2>&1
+    source <(curl -sL https://raw.githubusercontent.com/08kenneth/SSHPLUS/main/Modulos/v2ray) --remove > /dev/null 2>&1
     rm -rf /etc/SSHPlus/RegV2ray > /dev/null 2>&1
-	rm -rf /etc/SSHPlus/v2ray > /dev/null 2>&1
-    echo -e "\n\033[1;32mV2RAY REMOVIDO COM SUCESSO !\033[0m"
+    echo -e "\n\033[1;32mV2RAY ELIMINADO CON EXITO !\033[0m"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
     }
     infocuenta () {
-    echo -e "\E[44;1;37m            INFORMAÇÃO DE CONTA             \E[0m"
+    echo -e "\E[44;1;37m            INFORMACION DE LA CUENTA             \E[0m"
     v2ray info
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
@@ -119,7 +121,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     sed -i '17i\           \},' /etc/v2ray/config.json
     echo ""
     while true; do
-    echo -ne "\e[91m >> Digite um usuário: \033[1;92m"
+    echo -ne "\e[91m >> Digite un usuario: \033[1;92m"
          read -p ": " nick
          nick="$(echo $nick|sed -e 's/[^a-z0-9 -]//ig')"
          if [[ -z $nick ]]; then
@@ -133,7 +135,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     done
     echo -e "\e[91m >> Adicionar UUID: \e[92m$UUID "
     while true; do
-         echo -ne "\e[91m >> Duração de UUID (Dias):\033[1;92m " && read diasuser
+         echo -ne "\e[91m >> Duracion de UUID (Dias):\033[1;92m " && read diasuser
          if [[ -z "$diasuser" ]]; then
          echo -e "$msg17" && continue
          elif [[ "$diasuser" != +([0-9]) ]]; then
@@ -160,7 +162,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     sed -n ${suma}p /etc/SSHPlus/v2ray/confuuid.log 
     echo ""
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\e[92m           UUID ADICIONADO COM EXITO "
+    echo -e "\e[92m           UUID ADICIONADO CON EXITO "
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
@@ -171,7 +173,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     clear
     invaliduuid () {
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\e[91m                    UUID INVALIDO \n"
+    echo -e "\e[91m                    UUID NO VALIDO \n"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
     }
@@ -196,7 +198,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     v2ray restart > /dev/null 2>&1
     echo ""
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\e[92m           UUID ELIMINADO COM EXITO "
+    echo -e "\e[92m           UUID ELIMINADO CON EXITO "
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
@@ -216,7 +218,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     local RETURN="$(cat $HOST|cut -d'|' -f2)"
     local IDEUUID="$(cat $HOST|cut -d'|' -f1)"
     if [[ -z $RETURN ]]; then
-    echo -e "----- NENHUM USUARIO REGISTRADO -----"
+    echo -e "----- NINGUNA USUARIO REGISTRADO -----"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
     else
@@ -263,7 +265,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     local RETURN="$(cat $HOST|cut -d'|' -f2)"
     local IDEUUID="$(cat $HOST|cut -d'|' -f1)"
     if [[ -z $RETURN ]]; then
-    echo -e "----- NENHUMA PORTA REGISTRADA -----"
+    echo -e "----- NINGUN PUERTO REGISTRADO -----"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
     else
@@ -335,7 +337,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     local RETURN="$(cat $HOST|cut -d'|' -f2)"
     local IDEUUID="$(cat $HOST|cut -d'|' -f1)"
     if [[ -z $RETURN ]]; then
-    echo -e "----- NENHUMA PORTA REGISTRADA -----"
+    echo -e "----- NINGUNA PUERTO REGISTRADO -----"
     return 0
     else
     i=1
@@ -373,7 +375,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     done
     invaliduuid () {
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-    echo -e "\e[91m                PORTA INVALIDA \n"
+    echo -e "\e[91m                PUERTO NO VALIDA \n"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;37m• \033[1;33mEnter Para Continuar\033[1;31m" && read enter
     fun_v2raymanager
@@ -390,8 +392,8 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     fun_v2raymanager
     }
     ## MENU
-    echo -e "\033[1;37m\033[1;33m[1] > LIMITAR DADOS x PORTA\033[1;31m"
-    echo -e "\033[1;37m\033[1;33m[2] > RESETAR DADOS DE PORTA\033[1;31m"
+    echo -e "\033[1;37m\033[1;33m[1] > LIMITAR DATOS x PUERTO\033[1;31m"
+    echo -e "\033[1;37m\033[1;33m[2] > REINICIAR DATOS DE PUERTO\033[1;31m"
     echo -e "\033[1;37m\033[1;33m[3] > VER DATOS CONSUMIDOS\033[1;31m"
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo -e "\033[1;32m [0] > \e[97m\033[1;41m VOLTAR \033[1;37m"
@@ -419,7 +421,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     fi
     unset PID_GEN
     PID_GEN=$(ps x|grep -v grep|grep "limv2ray")
-    [[ ! $PID_GEN ]] && PID_GEN="\e[91m ✕  " || PID_GEN="\e[92m ✓  "
+    [[ ! $PID_GEN ]] && PID_GEN="\e[91m [ DESACTIVADO ] " || PID_GEN="\e[92m [ ACTIVADO ] "
     statgen="$(echo $PID_GEN)"
     clear 
     clear
@@ -448,7 +450,7 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
     }
 
     PID_GEN=$(ps x|grep -v grep|grep "limv2ray")
-    [[ ! $PID_GEN ]] && PID_GEN="\e[91m✕  " || PID_GEN="\e[92m✓  "
+    [[ ! $PID_GEN ]] && PID_GEN="\e[91m [ DESACTIVADO ] " || PID_GEN="\e[92m [ ACTIVADO ] "
     statgen="$(echo $PID_GEN)"
     #SPR & 
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -457,39 +459,41 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
 		while true $x != "ok"; do
 			[[ ! -e '/home/sshplus' ]] && exit 0
 			clear
-			echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
-			echo -e "\033[0;34m┃\E[44;1;37m            GERENCIADOR V2RAY            \E[0m\033[0;34m┃"
-			echo -e "\033[0;34m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m"
+			echo -e "\E[44;1;37m                GERENTE V2RAY                 \E[0m\n"
 
 			xv2ray1=`if netstat -tunlp |grep v2ray 1> /dev/null 2> /dev/null; then
-			echo -e "\e[92m ATIVADO"
+			echo -e "\e[92m ACTIVADO"
 			else
-			echo -e "\e[91m DESATIVADO"
+			echo -e "\e[91m DESACTIVADO"
 			fi`;
-            echo -e "\033[1;32mSERVICO: \033[1;33mV2RAY \033[1;32m$xv2ray1\033[1;37m" 
+            echo -e "\033[1;32mSERVICIO \033[1;33mV2RAY: \033[1;32m$xv2ray1\033[1;37m" 
 			xv2ray=`if netstat -tunlp |grep v2ray 1> /dev/null 2> /dev/null; then
-			echo -e "\033[1;32m✓ "
+			echo -e "\033[1;32m◉ "
 			else
-			echo -e "\033[1;31m✕ "
+			echo -e "\033[1;31m○ "
 			fi`;          
-			echo -e "\033[0;34m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mINSTALAR V2RAY $xv2ray                 \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mALTERAR PROTOCOLO                 \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m03\033[1;31m] \033[1;37m• \033[1;33mATIVAR TLS                        \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m04\033[1;31m] \033[1;37m• \033[1;33mALTERAR PORTA V2RAY               \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m05\033[1;31m] \033[1;37m• \033[1;33mADICIONAR USUARIO UUID            \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mELIMINAR USUARIO UUID             \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mMOSTAR USUARIOS REGISTRADOS       \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mINFORMAÇÃO DA CONTA               \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mESTATÍSTICAS DE CONSUMO           \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mLIMITADOR POR CONSUMO             \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mLIMPADOR DE EXPIRADOS $statgen           \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mDESINSTALAR V2RAY                 \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m13\033[1;31m] \033[1;37m• \033[1;33mVOLTAR \033[1;32m<\033[1;33m<\033[1;31m<                        \033[0;34m┃"
-			echo -e "\033[0;34m┃\033[1;31m[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSAIR \033[1;32m<\033[1;33m<\033[1;31m<                          \033[0;34m┃"
-			echo -e "\033[0;34m╰┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m"
+			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+			echo ""
+			echo -e "\033[1;31m[\033[1;36m01\033[1;31m] \033[1;37m• \033[1;33mINSTALAR V2RAY $xv2ray\033[1;31m
+[\033[1;36m02\033[1;31m] \033[1;37m• \033[1;33mCAMBIAR PROTOCOLO\033[1;31m
+[\033[1;36m03\033[1;31m] \033[1;37m• \033[1;33mACTIVAR TLS\033[1;31m
+[\033[1;36m04\033[1;31m] \033[1;37m• \033[1;33mCAMBIAR PUERTO V2RAY\033[1;31m
+[\033[1;36m05\033[1;31m] \033[1;37m• \033[1;33mADICIONAR USUARIO UUID\033[1;31m
+[\033[1;36m06\033[1;31m] \033[1;37m• \033[1;33mELIMINAR USUARIO UUID\033[1;31m
+[\033[1;36m07\033[1;31m] \033[1;37m• \033[1;33mMOSTAR USUARIOS REGISTRADOS\033[1;31m
+[\033[1;36m08\033[1;31m] \033[1;37m• \033[1;33mINFORMACION DE CUENTAS\033[1;31m
+[\033[1;36m09\033[1;31m] \033[1;37m• \033[1;33mESTADÍSTICAS DE CONSUMO\033[1;31m
+[\033[1;36m10\033[1;31m] \033[1;37m• \033[1;33mLIMITADOR POR CONSUMO\e[91m ( BETA x PORT )\033[1;31m
+[\033[1;36m11\033[1;31m] \033[1;37m• \033[1;33mLIMPIADOR DE EXPIRADOS ------- $statgen\033[1;31m
+[\033[1;36m12\033[1;31m] \033[1;37m• \033[1;33mDESINSTALAR V2RAY\033[1;31m
+[\033[1;36m13\033[1;31m] \033[1;37m• \033[1;33mVOLVER \033[1;32m<\033[1;33m<\033[1;31m< \033[1;31m
+[\033[1;36m00\033[1;31m] \033[1;37m• \033[1;33mSALIR \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+
+			echo ""
+			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+			echo ""
 			tput civis
-			echo -ne "\033[0;34m ╰╼\033[1;32mOQUE DESEJA FAZER \033[1;37m?\033[1;31m?\033[1;37m: "
+			echo -ne "\033[1;32mQUE DESEA HACER \033[1;33m?\033[1;31m?\033[1;37m :"
 			read x
 			tput cnorm
 			clear
@@ -536,13 +540,13 @@ msg17='\033[1;37m\033[1;33m(Sem imformação - Para Cancelar Digite CRTL + C)\03
 				;;
 
 			0 | 00)
-				echo -e "\033[1;31mSaindo...\033[0m"
+				echo -e "\033[1;31mSaliendo...\033[0m"
 				sleep 2
 				clear
 				exit
 				;;
 			*)
-				echo -e "\033[1;31mOpcao invalida !\033[0m"
+				echo -e "\033[1;31mOpcion invalida !\033[0m"
 				sleep 2
 				;;
 			esac

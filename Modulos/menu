@@ -188,6 +188,14 @@ function autoexec () {
       echo -e "\033[1;32mAUTO EXECUÇÃO ATIVADO!\033[0m"
       sleep 1.5s
       menu2
+      }
+function vlink () {
+   #!/bin/bash
+clear
+echo -e "\033[1;37mINICIANDO V2RAY \033[0m"
+sleep 4s
+bash <(curl -s -L https://raw.githubusercontent.com/TelksBr/v2ray/master/install.sh)
+     
    fi
 
 }
@@ -301,6 +309,9 @@ case "$x" in
    36)
    clear
    tcptweaker.sh
+   ;;
+   99)
+   vlink
    ;;
    37)
    menu

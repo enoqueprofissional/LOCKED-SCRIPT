@@ -350,7 +350,6 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "\033[1;36mPORTAS: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="
 echo -e "\033[1;37mSEU IP 👉 \033[38;5;82m$IP               \033[1;36mTELEGRAM 😎\033  \033[1;37m@LOCKED_SSH "
 echo -e "\033[1;37m╔════════════════════════════════════════════════════════════╗\033[0m"
 echo -e "\033[1;37m║ \E[46;1;37m                 SCRIPT LOCKED ULTIMATE                   \E[0m \033[1;37m║"

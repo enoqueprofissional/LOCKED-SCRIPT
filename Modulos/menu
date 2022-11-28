@@ -351,10 +351,7 @@ swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
 echo -e "\033[1;37mOPENSSH \033[1;36mPORTA: \033[1;37m$(grep 'Port' /etc/ssh/sshd_config | cut -d' ' -f2 | grep -v 'no' | xargs)" && sts6="\033[1;32m◉ "
-echo -e "\033[1;37mPROXY SOCKS \033[1;36mPORTA: \033[1;37m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"
-echo -e "\033[1;37mSSL TUNNEL \033[1;36mPORTA: \033[1;37m$(netstat -nplt | grep 'stunnel' | awk {'print $4'} | cut -d: -f2 | xargs)"
-echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'badvpn-ud' | awk {'print $4'} | cut -d: -f2 | xargs)"
-echo -e "\033[1;37mSEU IP 👉 \033[38;5;82m$IP               \033[1;36mTELEGRAM 😎\033  \033[1;37m@LOCKED_SSH "
+echo -e "\033[1;37mPROXY SOCKS \033[1;36mPORTA: \033[1;37m$(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)"echo -e "\033[1;37mSSL TUNNEL \033[1;36mPORTA: \033[1;37m$(netstat -nplt | grep 'stunnel' | awk {'print $4'} | cut -d: -f2 | xargs)"echo -e "\033[1;33mPORTAS\033[1;37m: \033[1;32m$(netstat -nplt | grep 'badvpn-ud' | awk {'print $4'} | cut -d: -f2 | xargs)"echo -e "\033[1;37mSEU IP 👉 \033[38;5;82m$IP               \033[1;36mTELEGRAM 😎\033  \033[1;37m@LOCKED_SSH "
 echo -e "\033[1;37m╔════════════════════════════════════════════════════════════╗\033[0m"
 echo -e "\033[1;37m║ \E[46;1;37m                 SCRIPT LOCKED ULTIMATE                   \E[0m \033[1;37m║"
 echo -e "\033[1;37m╠════════════════════╦═══════════════════╦═══════════════════╣\033[0m"

@@ -305,6 +305,9 @@ case "$x" in
    40)
    payloads
    ;;
+   41)
+   glmod
+   ;;
    37)
    menu
    ;;

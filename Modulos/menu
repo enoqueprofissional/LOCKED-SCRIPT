@@ -301,6 +301,9 @@ case "$x" in
    36)
    clear
    tcptweaker.sh
+   40)
+   clear
+   payloads
    ;;
    37)
    menu

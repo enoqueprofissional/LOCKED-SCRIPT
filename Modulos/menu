@@ -306,7 +306,7 @@ case "$x" in
    payloads
    ;;
    41)
-   aplicativos
+   glmod
    ;;
    37)
    menu

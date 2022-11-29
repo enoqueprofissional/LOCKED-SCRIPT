@@ -14,8 +14,6 @@
 			case $x in
 			1 | 01)
 			bash <(curl -sL https://raw.githubusercontent.com/Lockednet/CheckUser/main/install.sh)
-			2 | 02)
-			glmod
 			;;
 			0 | 00)
 			clear

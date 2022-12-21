@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="https://i.ibb.co/3NPN3LC/Pics-Art-12-20-11-35-33.jpg" height="470" width="270">
+<img src="https://i.ibb.co/3NPN3LC/Pics-Art-12-20-11-35-33.jpg" height="1080" width="876">
 
 <br/><br/>
 

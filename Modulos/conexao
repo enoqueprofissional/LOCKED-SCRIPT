@@ -2181,7 +2181,7 @@ echo -e "\033[01;37m║\033[0m"
 			telks
             ;;
 			14 | 14)
-			v2init
+			v2raymanager
 			;;
 			0 | 00)
 			clear

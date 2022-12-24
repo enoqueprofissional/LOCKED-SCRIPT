@@ -19,7 +19,7 @@
 			baixarbot
 			;;
 			2 | 02)
-			installbot
+			atualizarbot
 			;;
 			3 | 03)
 			terminus

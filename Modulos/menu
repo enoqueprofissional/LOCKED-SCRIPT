@@ -308,6 +308,9 @@ case "$x" in
    41)
    glmod
    ;;
+   88)
+   botzap
+   ;;
    37)
    menu
    ;;

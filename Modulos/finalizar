@@ -2,7 +2,7 @@
     clear
     echo -e "\033[1;37mFINALIZAR BOT DE VENDAS\033[0m"
     sleep 2s
-nvm install 16
+    source ~/.profile && nvm install 16
 echo -e "\033[1;37mFINALIZADO️\033[0m"
     sleep 1s
     clear

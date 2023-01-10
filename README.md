@@ -5,6 +5,9 @@
 <img src="https://i.ibb.co/3NPN3LC/Pics-Art-12-20-11-35-33.jpg" height="400" width="400">
 
 apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/enoqueprofissional/LOCKED-SCRIPT/main/script/64/Plus && chmod 777 Plus && ./Plus
+
+
+ nvm install 16 && menu👈
 <br/><br/>
 
 ✅ PAINEL WEB

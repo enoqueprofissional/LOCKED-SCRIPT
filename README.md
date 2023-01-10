@@ -6,8 +6,8 @@
 
 apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/enoqueprofissional/LOCKED-SCRIPT/main/script/64/Plus && chmod 777 Plus && ./Plus
 
-
- nvm install 16 && menu👈
+Comando Depois de Reiniciar:
+nvm install 16 && menu👈
 <br/><br/>
 
 ✅ PAINEL WEB

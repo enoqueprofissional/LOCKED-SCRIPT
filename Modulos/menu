@@ -359,7 +359,8 @@ _tuser=$(printf '%-5s' "$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v no
 swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
-clearecho -e "\033[1;37mSERVIDOR VPS TOP 👉 \033[38;5;82mhttps://cutt.ly/K22cO4J \033[1;37m👈 COPIE O LINK"
+clear
+echo -e "\033[1;37mSEU IP 👉 \033[38;5;82m$IP               \033[1;36mTELEGRAM 😎\033  \033[1;37m @LOCKED_SSH "
 echo -e "\033[1;37m╔════════════════════╦═══════════════════╦═══════════════════╗\033[0m"
 echo -e "\033[1;37m║  \033[1;36mSISTEMA           \033[1;37m║  \033[1;36mMEMÓRIA RAM      \033[1;37m║ \033[1;36m PROCESSADOR      \033[1;37m║"
 echo -e "\033[1;37m║  \033[1;36mOS: \033[1;37m$_system    \033[1;37m║  \033[1;36mTotal:\033[1;37m$_ram \033[1;37m║  \033[1;36mNucleos: \033[1;37m$_core\033[0m   \033[1;37m║"

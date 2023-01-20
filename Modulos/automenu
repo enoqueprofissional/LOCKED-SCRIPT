@@ -1,3 +1,5 @@
+#!/bin/bash
+    clear
 function autoexec () {
    if grep "menu;" /etc/profile > /dev/null; then
       clear

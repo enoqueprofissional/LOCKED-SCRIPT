@@ -75,7 +75,7 @@
             speedtest
             ;;
             13 | 13)
-            autoexec
+            automenu
             ;;
 			0 | 00)
 			clear

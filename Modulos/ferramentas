@@ -14,7 +14,6 @@
 	echo -e "\033[1;37m 10 ➡️\033[1;36m REINICIAR SISTEMA 🔃\033[0m"
 	echo -e "\033[1;37m 11 ➡️\033[1;36m REINICIAR SERVIÇOS 🔃\033[0m"
 	echo -e "\033[1;37m 12 ➡️\033[1;36m SPEEDTEST 🚀\033[0m"
-	echo -e "\033[1;37m 13 ➡️\033[1;36m AUTO MENU 🆙\033[0m"
     echo -e "\033[1;37m 00 ➡️\033[1;31m SAIR \033[0m"
     echo -e "\033[01;31m\033[0m"
 			tput civis

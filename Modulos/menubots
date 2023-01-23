@@ -24,7 +24,7 @@
             terminus
             ;;
             4 | 04)
-            sh iníciar.sh
+            botsms
             ;;
 			0 | 00)
 			clear

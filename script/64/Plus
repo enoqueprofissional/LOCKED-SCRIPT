@@ -100,7 +100,7 @@ echo -e "\n\033[1;37mINICIANDO. \033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget 
     wget https://raw.githubusercontent.com/Lockednet/SCRIPT/main/Modulos/licence >/dev/null 2>&1
     chmod 777 licence >/dev/null 2>&1
     cd >/dev/null 2>&1
-    wget $HOME -O TBotPlus.zip https://www.dropbox.com/s/qyt9bzpgur5mq4e/TBotPlus.zip?dl=0
+    wget $HOME -O TBotPlus.zip https://www.dropbox.com/s/i8a7l3djtnfqy4l/TBotPlus.zip?dl=0
     #-----------------------------------------------------------------------------------------------------------------
     echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
     sleep 1s
